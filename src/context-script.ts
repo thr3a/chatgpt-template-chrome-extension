@@ -6,6 +6,7 @@ browser.runtime.onMessage.addListener((request: SendMessageWithValue<string>) =>
     const textarea = document.querySelector<HTMLTextAreaElement>('form textarea');
     if (textarea !== null) {
       textarea.value = `${request.value}\n\n\n`;
+      textarea.style.height = '300px';
     }
   }
 });
